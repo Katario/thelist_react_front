@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  front_container:
+    container_name: front_container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - 3000:3000
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true #temporary fix because of a react bug : https://github.com/facebook/create-react-app/issues/8688
