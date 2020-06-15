@@ -1,0 +1,33 @@
+.Item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  height: 80px;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  cursor: pointer;
+  transition: background 150ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.Item:hover,
+.Item:focus {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.Item:focus {
+  outline: 0;
+}
+
+.Item:active {
+  background-color: rgba(255, 0, 0, 0.4);
+}

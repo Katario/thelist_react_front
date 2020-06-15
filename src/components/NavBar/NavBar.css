@@ -1,0 +1,10 @@
+.NavBar {
+  height:100%;
+  overflow-y: scroll;
+}
+
+.NavBar-content {
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+}
