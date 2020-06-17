@@ -1,3 +1,5 @@
 .Content {
   background-color: green;
+  display:flex;
+  flex-flow: column nowrap;
 }
