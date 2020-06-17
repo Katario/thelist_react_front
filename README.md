@@ -5,6 +5,11 @@ To Start:
 
 
 
+External libs used :
+- Quill : https://github.com/quilljs/quill
+
+
+
 TODO:
 - Customize the scrollbar for the left menu
 - Add animations
@@ -14,3 +19,6 @@ TODO:
 - Add the PWA functionnalities
 - Connect to the API
 - Create differents types of pages
+- Add scss
+- Change font
+- Maybe move author?

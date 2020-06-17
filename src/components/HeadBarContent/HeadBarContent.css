@@ -1,0 +1,64 @@
+.HeadBarContent {
+  height: 200px;
+  width: 100%;
+  background-color: #252525;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-areas: 
+  '. . .'
+  '. input .'
+  'authors . template'
+  ;
+  justify-items: center;
+  align-items: center;
+}
+
+.HeadBarContent-input {
+  grid-area: input;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.HeadBarContent-authors {
+  grid-area: authors;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.HeadBarContent-title {
+  margin:0;
+	border:0;
+	padding:0;
+	display:inline-block;
+	vertical-align:middle;
+	white-space:normal;
+  background: none;
+  color: white;
+  font-size: 42px;
+  opacity: 0.8;
+  line-height:1;
+  /* text-align: center; */
+}
+
+.HeadBarContent-title::placeholder {
+  opacity: 1;
+  text-align: center;
+}
+
+.HeadBarContent-title:focus {
+  outline: 0;
+}
+
+.HeadBarContent-title:focus::placeholder {
+  opacity: 0;
+}
+
+.HeadBarContent-template {
+  grid-area: template;
+
+}
