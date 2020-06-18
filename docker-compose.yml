@@ -1,7 +1,7 @@
 version: '3.3'
 services:
-  front_container:
-    container_name: front_container
+  thelist_react_container:
+    container_name: thelist_react_container
     restart: always
     build:
       context: .

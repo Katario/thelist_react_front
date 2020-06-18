@@ -1,4 +1,6 @@
-This app purpose is to manage differents types of lists.
+The List
+
+This app purpose is to manage differents types of lists and writing notes.
 
 To Start:
 - docker-compose build && docker-compose up
