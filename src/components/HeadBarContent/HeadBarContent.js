@@ -11,10 +11,13 @@ let HeadBarContent = () => {
           placeholder='Click here to type'
           maxLength='20'
         ></input>
+        <span className='HeadBarContent-underline'></span>
       </div>
+
       <div className="HeadBarContent-authors">
         <span className='HeadBarContent-author'>By Author</span>
       </div>
+
       <div className='HeadBarContent-template'>
         Blank Template
       </div>
