@@ -3,14 +3,16 @@ import HeadBarContent from '../HeadBarContent/HeadBarContent';
 import BlankTemplate from '../Templates/BlankTemplate';
 import './Content.css';
 
-let Content = () => {
-  return (
-    <div className="Content">
-      <HeadBarContent />
-      {/* Here I prepare to add the differents editable areas */}
-      <BlankTemplate />
-    </div>
-  );
-}
+export default class Content extends React.Component {
 
-export default Content;
+  
+  render() {
+    return (
+      <div className="Content">
+        <HeadBarContent selectedList={this.props.selectedList} />
+        {/* Here I prepare to add the differents editable areas */}
+        <BlankTemplate />
+      </div>
+    );
+  }
+}

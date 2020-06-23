@@ -7,6 +7,7 @@ export default class Item extends React.Component {
       <button
           className="Item"
           type="button"
+          onClick={() => this.props.handleClick(this.props.id)}
         >
           {this.props.title}
       </button>

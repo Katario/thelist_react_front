@@ -6,13 +6,26 @@ import Content from '../Content/Content';
 import './Body.css';
 
 export default class Body extends React.Component {
-  
   constructor(props) {
     super(props);
+    this.handleItemClick= this.handleItemClick.bind(this);
 
     this.state = {
-      lists: []
+      lists: [],
+      selectedList: {}
     }  
+  }
+
+  handleItemClick(id) {
+    this.updateSelectedList(id);
+  }
+
+  updateSelectedList(id) {
+    api.get('/list/' + id)
+      .then(res => {
+        const selectedList = res.data.list;
+        this.setState({ selectedList });
+      })
   }
 
   componentDidMount() {
@@ -26,8 +39,13 @@ export default class Body extends React.Component {
   render() {
     return (
       <div className="Body container">
-        <NavBar lists={this.state.lists} />
-        <Content />
+        <NavBar 
+          lists={this.state.lists}
+          handleItemClick={this.handleItemClick}
+        />
+        <Content 
+          selectedList={this.state.selectedList}
+        />
       </div>
     );
   }
