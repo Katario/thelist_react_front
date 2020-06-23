@@ -1,15 +1,15 @@
 import React from 'react';
 import './Item.css';
 
-let Item = () => {
-  return (
-    <button
-        className="Item"
-        type="button"
-      >
-        Learn React
-    </button>
-  );
+export default class Item extends React.Component {
+  render () {
+    return (
+      <button
+          className="Item"
+          type="button"
+        >
+          {this.props.title}
+      </button>
+    );
+  }
 }
-
-export default Item;

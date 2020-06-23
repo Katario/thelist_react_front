@@ -4,7 +4,6 @@ import './NavBar.css';
 
 export default class NavBar extends React.Component {
 
- 
   pushItemList = () => {
     return this.props.lists.map((list, i) => {
       return <Item key={i} title={list.title} />;
