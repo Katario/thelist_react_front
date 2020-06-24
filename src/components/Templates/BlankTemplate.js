@@ -6,19 +6,20 @@ import './template.css';
 
 class BlankTemplate extends React.Component {
   constructor (props) {
-    super(props)
+    super(props);
     this.state = { 
       editorHtml: '',
-       theme: 'snow'
-    }
-    this.handleChange = this.handleChange.bind(this)
+      theme: 'snow'
+    };
+
+    this.handleChange = this.handleChange.bind(this);
   }
   
-  handleChange (html) {
+  handleChange(html) {
   	this.setState({ editorHtml: html });
   }
   
-  render () {
+  render() {
     return (
       <div className="BlankTemplate">
         <ReactQuill 

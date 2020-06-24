@@ -16,6 +16,22 @@ export default class Body extends React.Component {
     }  
   }
 
+  componentDidMount() {
+    api.get('/list')
+      .then(res => {
+        const lists = res.data.lists;
+        this.setState({ lists });
+        const {0: selectedList} = lists;
+        this.setState({ selectedList });
+      })
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (this.state.selectedList !== prevState.selectedList) {
+      console.log(this.state.selectedList);
+    }
+  }
+
   handleItemClick(id) {
     this.updateSelectedList(id);
   }
@@ -28,14 +44,6 @@ export default class Body extends React.Component {
       })
   }
 
-  componentDidMount() {
-    api.get('/list')
-      .then(res => {
-        const lists = res.data.lists;
-        this.setState({ lists });
-      })
-  }
-  
   render() {
     return (
       <div className="Body container">
